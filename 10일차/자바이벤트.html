@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .like{
+            width: 120px;
+            padding: 5px 10px;
+            border: 1px solid #dbdbdb;
+            text-align: center;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="like">
+        <i class="fa-regular fa-thumbs-up"></i>
+        <span>좋아요</span>
+        <span class="number">0</span>
+    </div>
+
+    <script>
+
+        // *이벤트
+        // => 어떠한 행위를 했을 때 상호작용이 일어나는 현상
+        // => 유저가 특정 행동을 했을 때 엘리먼트에서 나타나는 반응
+        // => addEventListener("이벤트명", 실행할 함수)
+
+        const likeEl = document.querySelector(".like");
+        const numEl = document.querySelector(".number");
+        let num = 0;
+        
+        // likeEl.addEventListener("click", () => {
+        //     // likeEl.style.backgroundColor = "lightblue";
+        //     numEl.innerText = num += 1;
+        // });
+
+        // const clickHandler = () => {
+        //     numEl.innerText = num++;
+        // }
+
+        const clickHandler = () => numEl.innerText = num++;
+        // =>화살표 함수는 반환값이 한 줄일 때 중괄호 생략가능
+
+        likeEl.addEventListener("click", clickHandler);
+
+    </script>
+    
+</body>
+</html>

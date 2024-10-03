@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: deepskyblue;
+    padding: 10px;
+}
+
+.logo{
+    font-size: 50px;
+}
+
+.allmenu{
+    background-color: darkcyan;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+.allmenu a{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    align-items: center;
+    text-align: center;
+}
+
+.allmenu li{
+    display: none;
+}

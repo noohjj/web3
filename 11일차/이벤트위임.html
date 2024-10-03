@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .con_wrap{
+            max-width: 1400px;
+            width: 100%;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .con{
+            width: 32%;
+            height: 500px;
+            background-color: blueviolet;
+            font-size: 50px;
+            transition: 0.5s;
+        }
+
+        .active{
+            background-color: cyan;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="con_wrap">
+        <div class="con">1</div>
+        <div class="con">2</div>
+        <div class="con">3</div>
+    </div>
+
+    <script>
+
+        // const conEl = document.querySelectorAll('.con')
+        
+        // for(let i = 0; i < conEl.length; i++){
+        //     conEl[i].addEventListener('click', () => {
+        //         conEl[i].classList.add('active');
+        //     });
+        // }
+
+        // *이벤트 위임
+        // => 부모에게 이벤트를 적용시킴
+        // => 자식이 필요하면 이벤트가 설됨 
+
+        // const conWrapEl = document.querySelectorAll('.con');
+
+        // const clickHandler = () => {
+        //     const result = conWrapEl.classList.contains('active');
+        //     console.log(result);
+            
+        // }
+
+        // for(let i = 0; i < conWrapEl.length; i++){
+        //     conWrapEl[i].addEventListener('click', () => {
+        //         conWrapEl[i].classList.add('active');
+        //     });
+        // }
+        
+        // conWrapEl.addEventListener('click', clickHandler);
+
+        // const conWrapEl = document.querySelector('.con_wrap');
+
+        // const clickHandler = (e) => {
+        //     if(e.target.classList.contains('con')){
+        //         e.target.classList.toggle('active');
+        //     }
+        // }
+
+        // conWrapEl.addEventListener('click', clickHandler);
+
+        // *이벤트
+        // 1. 컨텐츠를 클릭하면 active 클래스가 추가되길 원함
+        // => 이벤트 위임
+        // => 이벤트는 부모를 선택해야 함
+        // => 선택된 부모에게 클릭 이벤트를 적용함
+        // => 클릭한 엘리먼트 알아오기 (e.target)
+        // =>contains: 어떤 요소가 포함되었을 때
+
+        const conWrapEl = document.querySelector('.con_wrap');
+
+        const handlerClick = (e) => {
+            if(e.target.classList.contains('con')){
+                e.target.classList.toggle('active')
+            }
+        }
+
+        conWrapEl.addEventListener('click', handlerClick);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        h2{
+            color: blue;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+        }
+
+        .box:hover{
+            background-color: blue;
+        }
+
+    </style>
+    <script>
+        
+        var name = "정지훈";
+        var number = 29;
+
+        // document.write("안녕 내 이름은 " + name + "이야 나이는 " + number+ "살이라고 해")
+       
+        var naver = "http://naver.com";
+        var youtube = "http://youtube.com"
+
+        document.write("<h2>이렇게 적으면?</h2>")
+        // document.write('<a href="http://naver.com" target="blank">네이버 바로가기</a>')
+        document.write('<a href=' + naver + ' target="blank">' + '네이버 바로가기</a>')
+        document.write('<a href=' + youtube + ' target="blank">' + '유튜브 바로가기</a>')
+        document.write('<a href=' + naver + ' target="blank">' + ' <div class="box"></div></a>')
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // let user = [
+        //     a = {
+        //         name : "정지훈",
+        //         id : "jh30432",
+        //         eMail : "yk3216@naver.com",
+        //         profileImg : "jh.jpg"
+        //     },
+
+        //     b = {
+        //         name : "andy",
+        //         id : "ad20325",
+        //         eMail : "yk3216@naver.com",
+        //         profileImg : "ad.jpg"
+        //     },
+
+        //     c = {
+        //         name : "hoon",
+        //         id : "hn11026",
+        //         eMail : "yk3216@naver.com",
+        //         profileImg : "hn.jpg"
+        //     },
+
+        //     d = {
+        //         name : "jeong",
+        //         id : "jeong10463",
+        //         eMail : "yk3216@naver.com",
+        //         profileImg : "jn.jpg"
+        //     }
+        // ]   
+
+        // for(i = 0; i < 4; i++){
+        //     document.write(
+        //         `${this.i}번째 유저<br>
+        //         이름 : ${user[i].name}<br>
+        //         아이디 : ${user[i].id}<br>
+        //         이메일 : ${user[i].eMail}<br>
+        //         프로필 사진 : ${user[i].profileImg}<br><br>`
+        //     )
+        // }
+
+        const users = [
+            {
+                id: 0,
+                username: "js",
+                email: "jh@js.com",
+                avatar: "js.jpg"
+            },
+            {
+                id: 1,
+                username: "js1",
+                email: "jh1@js.com",
+                avatar: "js1.jpg"
+            },
+            {
+                id: 2,
+                username: "js2",
+                email: "jh2@js.com",
+                avatar: "js2.jpg"
+            },
+            {
+                id: 3,
+                username: "js3",
+                email: "jh3@js.com",
+                avatar: "js3.jpg"
+            }
+        ]
+
+        for(let i = 0; i < users.length; i++){
+            document.write(`${users[i].id}번째 유저<br>`);
+            document.write(`아이디 : ${users[i].username}<br>`);
+            document.write(`이메일 : ${users[i].email}<br>`);
+            document.write(`프로필사진 : ${users[i].avatar}<br>`)
+            document.write("------------------------------------<br>")
+        }
+
+        // document.write(`${users[0].id}번째 유저<br>`);
+        // document.write(`아이디 : ${users[0].username}<br>`);
+        // document.write(`이메일 : ${users[0].email}<br>`);
+        // document.write(`${users[0].avatar}<br>`)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

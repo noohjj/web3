@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Noto sans KR", system-ui;
+    color: white;
+}
+
+.wrap{
+    max-width: 415px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #1d1d1d;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* box-shadow:x축 y축 blur spread color */
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.back_btn{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: lightblue;
+}
+
+header h3{
+    font-weight: 400;
+}
+
+.con_wrap{
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.con_wrap h3{
+    font-weight: 400;
+}
+
+.con_wrap_1 .con:nth-child(1){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.con_wrap_1 .con:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    align-items: center;
+}
+
+.next_arrow{
+    opacity: 0.5;
+}
+
+.con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.toggle_btn{
+    width: 60px;
+    height: 35px;
+    background-color: #555;
+    border-radius: 50px;
+    position: relative;
+}
+
+.one_btn{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    transition: 0.25s ease-in-out;
+}
+
+/* .active{
+    left: 27.5px;
+}
+
+.bg_active{
+    background-color: rgb(32, 79, 197);
+} */
+
+.toggle_btn.active{
+    background-color: red;
+}
+
+.toggle_btn.active .one_btn{
+    left:27.5px;
+}

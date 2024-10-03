@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+        }
+
+        .con{
+            width: 200px;
+            height: 60px;
+            background-color: lightblue;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            padding: 50px;
+        }
+
+        h3{
+            margin-bottom: 20px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="con_wrap">
+        
+    </div>
+
+    <script>
+
+        const data = [
+            
+            {
+                id:0,
+                title: "this is title",
+                desc:"noohjj"
+            },
+
+            {
+                id:1,
+                title: "this is title1",
+                desc:"noohjj"
+            },
+
+            {
+                id:2,
+                title: "this is title2",
+                desc:"noohjj"
+            },
+
+        ]
+
+        const conWrapEl = document.querySelector('.con_wrap')
+
+        for(let i = 0; i < data.length; i++){
+            const conEl = document.createElement('div');
+            const titleEl = document.createElement('h3');
+            const descEl = document.createElement('p');
+            conEl.classList.add('con');
+
+            titleEl.innerText = data[i].title
+            descEl.innerText = data[i].desc
+            conEl.append(titleEl);
+            conEl.append(descEl);
+            console.log(conEl);
+
+            conWrapEl.append(conEl);
+        }
+
+    </script>
+    
+</body>
+</html>

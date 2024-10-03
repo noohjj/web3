@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let inputText_1 = prompt("이름을 입력하시오");
+        let inputText_2 = prompt("이메일을 입력하시오");
+        let inputText_3 = prompt("프로필 이미지 파일을 입력하시오");
+
+        const obj = {
+            username : inputText_1,
+            email : inputText_2,
+            profileImg : inputText_3,
+
+            intro: function(){
+                document.write("<h2>유저정보</h2><br>")
+                document.write(`유저아이디: ${this.username}<br>`);
+                document.write(`이메일: ${this.email}<br>`);
+                document.write(`profileImg: ${this.profileImg}<br>`);
+            }
+        };
+
+        // console.log(obj.username);
+        // console.log(obj.email);
+        // console.log(obj.profileImg);
+        obj.intro()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="headwrap">
+
+        <div class="logo">
+            JSTAGRAM
+        </div>
+
+        <div class="allmenuwrap">
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        
+            <div class="menu">
+                <h2>MENU</h2>
+                
+                <ul class="sidemenu">
+                    <li>콘텐츠소개</li>
+                    <li>나의 프로필</li>
+                    <li>사진 변경</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="allwrap">    
+        
+        <div class="wrap">
+            
+            <div class="userwrap">
+                <div class="circle1"></div>
+                <h2>user 1</h2>
+            </div>
+
+            <div class="conbox1"></div>
+
+            <div class="heart">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+        
+        </div>
+
+        <div class="wrap">
+            
+            <div class="userwrap">
+                <div class="circle2"></div>
+                <h2>user 2</h2>
+            </div>
+
+            <div class="conbox2"></div>
+            
+            <div class="heart">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+        
+        </div>
+
+        <div class="wrap">
+
+            <div class="userwrap">
+                <div class="circle3"></div>
+                <h2>user 3</h2>
+            </div>
+
+            <div class="conbox3"></div>
+            
+            <div class="heart">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+        
+        </div>
+        
+    </div>
+
+    <script>
+
+        const userData = [
+
+            {
+                id:'user1',
+                img: 'https://png.pngtree.com/thumb_back/fw800/background/20230515/pngtree-blue-clouds-in-the-sky-wallpaper-stock-videos-e-broll-footage-image_2541971.jpg',
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt3xXWB1ucbPuH9GIkL1KhiJujxoLhk7VRsg&s'
+            },
+
+            {
+                id:'user2',
+                img: 'https://www.shutterstock.com/image-photo/there-clouds-sky-rainbow-pastel-260nw-1551257078.jpg',
+                profile: 'https://woorisajin.mycafe24.com/wp-content/uploads/2020/07/%EA%B0%95%EB%82%A8%EC%97%AD%ED%94%84%EB%A1%9C%ED%94%84%EB%A1%9C%ED%95%84%EC%82%AC%EC%A7%84-683x1024.jpg',
+            },
+
+            {
+                id: 'user3',
+                img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW3ta4wRanvq9LGI9oG8nU9X3W_ldgQPlCVw&s',
+                profile:'https://www.icreta.com/files/attach/images/319/275/055/8e2c1590a474a9afb78c4cb23a9af5b2.jpg'
+            }
+        ]
+
+
+
+        const heartEl = document.querySelectorAll('.fa-regular.fa-heart');
+
+        for(let i = 0; i < heartEl.length; i++){
+            heartEl[i].addEventListener('click', () => {
+                heartEl[i].classList.toggle('fa-solid');
+            });
+        }
+
+        clickHandler();
+
+        heartEl.addEventListener('click', clickHandler);
+
+        const hamburgerEl = document.querySelector('.hamburger');
+        const menuEl = document.querySelector('.menu');
+
+        const handlerClick = () => {
+            hamburgerEl.classList.toggle('none');
+            menuEl.classList.toggle('on');
+        }
+
+        hamburgerEl.addEventListener('click', handlerClick);
+
+    </script>
+
+</body>
+</html>

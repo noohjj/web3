@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="wrap">
+
+        <header>
+
+            <div class="back_btn">
+                <i class="fa-solid fa-angle-left"></i>
+                뒤로
+            </div>
+
+            <h3>분석 및 향상</h3>
+
+        </header>
+
+        <section>
+
+            <div class="con_wrap con_wrap_1">
+                
+                <div class="con">
+                    <h3>iPhone 분석 공유</h3>
+                    <div class="toggle_btn">
+                        <div class="one_btn"></div>
+                    </div>
+                </div>
+
+                <div class="con">
+                    <h3>분석 데이터</h3>
+                    <div class="next_arrow">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <div style="color: red;" class="con_wrap">
+                    <div class="con">
+                        <h3>iCloud 분석 공유</h3>
+                        <div class="toggle_btn">
+                            <div class="one_btn"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="con_wrap">
+                    <div class="con">
+                        <h3>안전 기능 향상</h3>
+                        <div class="toggle_btn">
+                            <div class="one_btn"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="con_wrap">
+                    <div class="con">
+                        <h3>SiRi 및 받아쓰기 기능 향상</h3>
+                        <div class="toggle_btn">
+                            <div class="one_btn"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <script>
+
+                // const sectionEl = document.querySelector('section');
+
+                // const toggleHandler = (e) => {
+                // if(e.target.classList.contains('toggle_btn')){
+                //     e.target.classlist.toggle('bg_active')
+                // }
+                // }                
+
+                // sectionEl.addEventListener('click', toggleHandler);
+
+                const sectionEl = document.querySelector('section');
+                const oneBtnEl = document.querySelectorAll('.one_btn')
+
+                const toggleHandler = (e) => {
+                    
+                    if(e.target.classList.contains('toggle_btn')){
+                        e.target.classList.toggle('active');
+                    }
+
+                    console.log(e.target.parentNode);
+                    // => 클릭한 타겟의 부모를 선택할 때
+                }
+
+                sectionEl.addEventListener('click', toggleHandler);
+
+            </script>
+
+        </section>
+    
+    </div>
+
+</body>
+</html>

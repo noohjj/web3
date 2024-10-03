@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 함수(function)
+        // =>프로그래밍 언어에서 기능을 뜻함
+        // => 사용 시 반드시 호출
+
+        // *선언적 함수
+        // => 이름이 있는 함수
+        // => 선언적 함수는 정의한 함수 앞에 호출해도 사용가능
+        // => 우선순위가 가장 높음
+        // function intro(){
+        //     document.write("이건 100줄 코드 입니다")
+        // }
+        // intro();
+
+        // *익명 함수
+        // => 이름 없는 함수
+        // => 반드시 함수 정의 이후 호출하여 사용할 것
+        // const intro = function(){
+        //     document.write("익명함수 ");
+        // }
+        // intro()
+
+        // const intro = function(){
+        //     document.write("안녕 나는 지훈이야 나이는 29살이야<br>")
+        // }
+
+        // const intro_2 = function(){
+        //     document.write("우리집 강아지의 이름은 땅콩이야<br>")
+        // }
+
+        // intro()
+        // intro_2()
+
+        // *매개변수
+        // => 함수내부에 사용하는 변수로 전달하는 목적을 가지고 있음
+        // => 매개변수는 함수 소괄호 안에 들어가며, 콤마를 이용하여 여러개 작성가능
+        // => 함수를 호출할 때 전달하고 싶은 값을 넣어줌
+
+        // const intro = function(name, age){
+        //     document.write(`안녕 나는 ${name}이야 나이는 ${age}살이야<br>`)
+        // }
+
+        // intro("지훈", 29);
+
+        // => 내장함수
+        // console.log();
+        // alert();
+        // prompt();
+
+        // *화살표 함수
+        // => 익명함수와 동일하지만 화살표 문법으로 표현됨
+        const intro = (name, age) => {
+            document.write(`강아지 이름: ${name}<br>`);
+            document.write(`나이: ${age}살<br>`);
+        }
+
+        intro("땅콩", 1);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

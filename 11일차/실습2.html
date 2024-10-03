@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .wrap{
+            max-width: 450px;
+            width: 100%;
+            height: 100vh;
+            background-color: #1d1d1d;
+            margin: 0 auto;
+            padding: 40px 20px;
+            overflow: scroll;
+        }
+
+        .menu_wrap{
+            width: 700px;
+            /* background-color: rgb(11, 97, 100); */
+            display: flex;
+        }
+
+        .menu{
+            padding: 10px;
+            background-color: rgb(37, 104, 126);
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="menu_wrap"></div>
+    </div>
+
+    <script>
+
+        const menus = [
+            {
+                id: 0,
+                title: "전체",
+                url: "#"
+            },
+
+            {
+                id: 1,
+                title: "shorts",
+                url: "#"
+            },
+
+            {
+                id: 2,
+                title: "동영상",
+                url: "#"
+            },
+
+            {
+                id: 3,
+                title: "시청하지 않음",
+                url: "#"
+            },
+
+            {
+                id: 4,
+                title: "감상한 동영상",
+                url: "#"
+            },
+
+            {
+                id: 5,
+                title: "최근에 업로드한 동영상",
+                url: "#"
+            },
+
+            {
+                id: 6,
+                title: "라이브",
+                url: "#"
+            },
+        ];
+
+        const menuWrapEl = document.querySelector('.menu_wrap');
+
+        for(let i = 0; i < menus.length; i++){
+            const menuEl = document.createElement('div');
+            // =>div 태그 제작
+            menuEl.classList.add('menu');
+            // =>클래스 추가
+
+            menuEl.innerHTML = `<a href = "${menus[i].url}">${menus[i].title}</a>`
+            // =>제작한 메뉴 태그에 a태그 링크와 타이틀 추가
+
+            menuWrapEl.append(menuEl);
+            // =>부모에게 제작한 메뉴 추가하기
+        }
+
+    </script>
+
+</body>
+</html>

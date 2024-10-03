@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        const userInfo = {
+            id : 0,
+            username : "test",
+            password: 123
+        } 
+        
+        // let inputText_1 = prompt("아이디를 입력하시오")
+        // let inputText_2 = prompt("패스워드를 입력하시오")
+
+        // if(inputText_1 == userInfo.id & inputText_2 == userInfo.password){
+        //     document.write(`로그인 되었습니다<br> ${userInfo.username}님 반갑습니다`)
+        // }else if(inputText_1 !== userInfo.id & inputText_2 == userInfo.password){
+        //     alert("아이디가 잘못되었습니다")
+        // }else if(inputText_1 == userInfo.id & inputText_2 !== userInfo.password){
+        //     alert("비밀번호가 잘못되었습니다")
+        // }else{
+        //     alert("아이디와 비밀번호를 다시 입력해주세요")
+        // }
+
+        const userNameInput = prompt("아이디를 입력해주세요")
+        const passwordInput = prompt("패스워드를 입력해주세요")
+
+        if(userNameInput !== userInfo.username){
+            alert("아이디가 틀렸습니다")
+        }else if(passwordInput !== userInfo.password){
+            alert("패스워드가 틀렸습니다")
+        }else if(userNameInput !== userInfo.username & passwordInput !== userInfo.password){
+            alert("아이디와 패스워드를 다시 입력해주세요")
+        }else{
+            document.write(`로그인 되었습니다!<br> ${username}님 환영합니다!`)
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
