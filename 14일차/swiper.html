@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        .swiper {
+            width: 600px;
+            height: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Slider main container -->
+    <div class="swiper">
+
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="https://png.pngtree.com/thumb_back/fh260/background/20211031/pngtree-abstract-bg-image_914283.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTutUq-QRLeof9NcnMd4ntzLPVhfEMUtWudFA&s" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://png.pngtree.com/thumb_back/fh260/background/20220427/pngtree-blue-desktop-wallpaper-with-bokeh-light-bg-shiny-illustration-photo-image_13267726.jpg" alt="">
+            </div>
+      
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+  
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+  
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+
+    </div>
+
+    <script>
+
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            // direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+
+            autoplay: {
+                delay: 2000,
+            },
+        });
+
+    </script>
+  
+</body>
+</html>
+
+<!-- *플러그인
+=> 외부에서 제작한 코드를 가져와 사용
+=> 플러그인 잘못 사용 시 작동도 안됨, 사이트 또는 앱이 느려짐, 충돌이 일어남
+
+*라이브러리
+=> 플러그인들의 집합체 -->

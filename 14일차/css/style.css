@@ -1,0 +1,99 @@
+@import url(reset.css);
+@import url(common.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.wrap{
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.con{
+    background-color: #f1f1f1;
+    margin-top: 35px;
+    padding: 20px;
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu{
+    cursor: pointer;
+    font-size: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+
+
+.menu_wrap{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    left:300%;
+    background-color: rgb(66, 93, 245);
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+.menu_active{
+    left: 0;
+}
+
+.user_info{
+    display: flex;
+}
+
+.username{
+    margin-top: 10px;
+}
+
+.avatar{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: lightgray;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.bg{
+    height: 400px;
+    background-color: lightgray;
+    margin: 20px 0;
+}
+
+.bg img{
+    height: 100%;
+    object-fit: cover;
+    /* =>이미지 태그를 배경 이미지처럼 
+    가득 채울때 사용(잘려나가는 영역이 생김) */
+}
+
+.heart{
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+}
+
+.full_heart{
+    color:red;
+}
