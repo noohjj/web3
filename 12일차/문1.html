@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading{
+            width: 400px;
+            height: 400px;
+            border: 20px solid;
+            border-color: lightseagreen transparent lightseagreen transparent;
+            border-radius: 50%;
+            animation: loading 1s infinite
+        }
+
+        @keyframes loading {
+            0%{
+                transform: rotate(0);
+            }
+
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        .active{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="loading"></div>
+    </div>
+
+    <script>
+
+        const loadingEl = document.querySelector('.loading');
+
+        setTimeout(() => {
+            loadingEl.classList.add('active');
+        }, 2000);
+    
+    </script>
+</body>
+</html>

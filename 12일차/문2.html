@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="time">00:00:00</div>
+
+    <script>
+        
+        const timeEl = document.querySelector('.time');
+
+        const timer = () => {
+            const date = new Date;
+            const hours = String(date.getHours()).padStart(2,"0");
+            const min = String(date.getMinutes()).padStart(2,"0");
+            const sec = String(date.getSeconds()).padStart(2,"0");
+
+            timeEl.innerText = `${hours}:${min}:${sec}`
+        }
+
+        timer()
+
+        setInterval(timer, 1000);
+
+    </script>
+
+</body>
+</html>
